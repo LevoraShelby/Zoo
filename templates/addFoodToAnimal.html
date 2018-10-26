@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Food - {{species}}{% endblock %}
+
+{% block content %}
+    <form action="../addFood/{{ species }}" method=POST>
+        Food: <select name="food">
+        {% for food in foods %}
+            <option value="{{ food[0] }}">
+                {{ food[0] }} measured in {{ food[1] }}
+            </option>
+        {% endfor %}
+        </select>
+        <br>
+        Amount: <input type="number" min="0" style="width:50px" name="amountPerAnimal">
+        <br>
+        <input type="submit" value="Add food">
+    </form>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Animal{% endblock %}
+
+{% block content %}
+<form action="/addAnimal" method="POST">
+    Animal Name: <input type="text" name="name"><br>
+    Number of Animals: <input type="number" min="1" name="numAnimals"><br>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}

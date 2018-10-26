@@ -1,0 +1,17 @@
+.navmenu {
+    overflow: hidden;
+    position: fixed;
+    background-color: lightblue;
+    top: 0;
+}
+
+.navmenu a {
+    float: left;
+    display: block;
+    border: 1px solid darkblue;
+    padding: 14px 16px;
+}
+
+.maincontent {
+    margin-top: 60px;
+}

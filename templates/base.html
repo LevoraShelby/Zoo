@@ -1,0 +1,9 @@
+<title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='nav.css') }}">
+<div class="navmenu">
+    <a href="/animals">Animals</a>
+    <a href="/food">Food</a>
+</div>
+<div class="maincontent">
+    {% block content %}{% endblock %}
+</div>

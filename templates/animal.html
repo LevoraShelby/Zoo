@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}{{species}}{% endblock %}
+
+{% block content %}
+<p>A {{ species }} eats:</p>
+<ul>
+    {% for dietDetail in dietDetails %}
+        <li>
+            {{ dietDetail['amountPerAnimal'] }}
+            {{ dietDetail['food']['unit'] }} of 
+            <a href="../food/{{ dietDetail['food']['name'] }}">
+                {{ dietDetail['food']['name'] }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+
+<a href="/addFood/{{ species }}">
+    <button>Add Food</button>
+</a>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}animals{% endblock %}
+
+{% block content %}
+<style>
+        table, th, td {
+            border: 1px solid black;
+        }
+</style>
+
+<table>
+    <tr>
+        <th>Animal</th>
+        <th># of Animals</th>
+    </tr>
+    {% for animal in animals %}
+        <tr>
+            <td><a href="animal/{{ animal[0] }}">{{ animal[0] }}</a></td>
+            <td>{{ animal[1] }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<br>
+
+<a href="/addAnimal">
+    <button>Add Animal</button>
+</a>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ name }}{% endblock %}
+
+{% block content %}
+<p>Animals that eat {{ name }}:</p>
+<ul>
+{% for animal in animals %}
+<li>
+    A 
+    <a href="/animal/{{ animal[0] }}">{{ animal[0] }}</a>
+    eats {{ animal[1] }} {{ units }}  of {{ name }}.
+</li>
+{% endfor %}
+</ul>
+{% endblock %}
